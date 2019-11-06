@@ -15,7 +15,6 @@ Requirements:
 - Xcode 11+
 - Swift 5+ 
 
-## Installation and Usage ##
 
 ## References ##
 
@@ -23,9 +22,6 @@ Requirements:
 - [Apple’s ARKit](https://developer.apple.com/documentation/arkit)
 - Demo Game using PoseKit (Link do jogo)
 
-## License ##
-
-PoseKit is released under the MIT license. See [LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
 
 
 
