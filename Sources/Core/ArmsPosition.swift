@@ -10,46 +10,8 @@ import Foundation
 import ARKit
 import RealityKit
 
-public enum ShoulderToForearmCase {
-    case up
-    case down
-    case straight
-}
-
-public enum ShoulderToForearmSubcase {
-//    case outstretched   // esticado
-    case upFront        //para cima e para frente
-    case upStraight     //para cima e reto
-    case upTotFront  //para cima totalmente reto(p frente)
-    case downFront      //para baixo e para frente
-    case downBack       //para baixo e para tras
-    case downStraight   //para baixo e reto
-    case downTotFront //para baixo totalmente reto(pra frente)
-    case reto           // ¯\(°_o)/¯ (╯°□°)╯
-    case retoBack         //reto e para tras
-    case retoFrente
-    case retoTotFront
-}
-
-public enum ForearmToHandForearmCase {
-    case reto       //reto
-    case bentUp     //dobrado pra cima
-    case bentDown   //dobrado pra baixo
-}
-
-public enum ForearmToHandSubcase {
-    case retoOutstretched //reto esticado
-    case bentRetoFront  //reto dobrado pra frente
-    case bentUp         //dobrado pra cima-reto
-    case bentUpOut      //dobrado pra cima-fora
-    case bentUpIn       //dobrado pra cima-dentro
-    case bentDown       //dobrado pra baixo-reto
-    case bentDownOut    //dobrado pra baixo-fora
-    case bentDownIn     //dobrado pra baixo-dentro
-}
 @available(iOS 13.0, *)
 
-//ajeitar pra deixar mais eficiente
 class ArmsPosition  {
     let bodyPart = BodyPart()
 

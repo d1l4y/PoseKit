@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <ARKit/ARKit.h>
 
-
 //! Project version number for poseKit.
 FOUNDATION_EXPORT double poseKitVersionNumber;
 
@@ -17,3 +16,4 @@ FOUNDATION_EXPORT double poseKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char poseKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <poseKit/PublicHeader.h>
+
