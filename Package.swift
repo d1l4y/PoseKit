@@ -12,7 +12,7 @@ import PackageDescription
 let package = Package(
     name: "poseKit",
     platforms: [
-        .iOS(.v8),
+        .iOS(.v13),
         .macOS(.v10_10),
     ],
     products: [

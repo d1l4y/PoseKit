@@ -51,3 +51,4 @@ class LeftArmPosition: ArmsPosition {
         return ShoulderToForearmPosZ(character: character, bodyAnchor: bodyAnchor, forearmCase: leftForearmCase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
     }
     
+}
