@@ -43,48 +43,5 @@ class LeftLegPosition : LegsPosition {
         let lKneeToFootCase = KneeToFootPos(kneeTransform: lKneeTransform, legTransform: lLegTransform, footTransform: lFootTransform, legToKneeSubcase: lLegToKneeSubcase)
     }
     
-        
-//        let vectorRootLeftLeg = vector(joint1: rootTransform, joint2: lLegTransform)
-//
-//        let vectorLeftLegToKnee = vector(joint1: lKneeTransform, joint2: lLegTransform)
-//
-//        let vectorLeftLegFoot = vector(joint1: lLegTransform, joint2: lFootTransform)
-//
-//        let distanciaLeftLegToLeftFoot = simd_distance(lLegTransform, lFootTransform)
-//
-////        print(vectorLeftKneeToLeg.y)
-//
-//
-//        let angulo = angle(vector1: vectorRootLeftLeg, vector2: vectorRootRightLeg)
-//        let anguloJE = angle(vector1: vectorLeftLegToKnee, vector2: vectorLeftLegFoot)
-       // print(anguloJE)
-        //print(anguloJE)
-        
-        //            let angulo = angle(vector1: vetorId, vector2: simd_float4(1,vetorId.y,vetorId.z,vetorId.w))
-        
-        
-        
-//        print("angulo entre pernas: ", angulo)
-//        print("angulo joelho esquerdo: ", anguloJE)
-//        print("angulo joelho direito: ", anguloJD)
-        
-        
-        
-        //            switch angulo {
-        //            case 0..<35:
-        //                print("pernas fechadas")
-        //            case 35..<70:
-        //                print("pernas abertas")
-        //            case 70..<105:
-        //                print("pernas muito abertas")
-        //            default:
-        //                print("espacate")
-        //            }
-    
-
-    // pensar nos casos para ambos as pernas
-    // se ambos muito dobrados, agachado
-    // se ambos retos, de pé
-    //se ambos dobrados, pernas abertas
 }
 

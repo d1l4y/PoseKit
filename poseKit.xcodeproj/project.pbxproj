@@ -35,7 +35,6 @@
 		35B742391F82A62900829B21 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; };
 		AF62250823743D7700011DF4 /* PositionCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62250723743D7700011DF4 /* PositionCases.swift */; };
 		AF974ED123736CA6000CD588 /* LeftLegPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974EC923736CA5000CD588 /* LeftLegPosition.swift */; };
-		AF974ED223736CA6000CD588 /* FaustoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974ECA23736CA5000CD588 /* FaustoKit.swift */; };
 		AF974ED323736CA6000CD588 /* RightArmPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974ECB23736CA5000CD588 /* RightArmPosition.swift */; };
 		AF974ED423736CA6000CD588 /* RightLegPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974ECC23736CA5000CD588 /* RightLegPosition.swift */; };
 		AF974ED523736CA6000CD588 /* Bodypart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF974ECD23736CA5000CD588 /* Bodypart.swift */; };
@@ -128,7 +127,6 @@
 		35B742351F82A61E00829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		AF62250723743D7700011DF4 /* PositionCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCases.swift; sourceTree = "<group>"; };
 		AF974EC923736CA5000CD588 /* LeftLegPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftLegPosition.swift; sourceTree = "<group>"; };
-		AF974ECA23736CA5000CD588 /* FaustoKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaustoKit.swift; sourceTree = "<group>"; };
 		AF974ECB23736CA5000CD588 /* RightArmPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightArmPosition.swift; sourceTree = "<group>"; };
 		AF974ECC23736CA5000CD588 /* RightLegPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightLegPosition.swift; sourceTree = "<group>"; };
 		AF974ECD23736CA5000CD588 /* Bodypart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bodypart.swift; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 			children = (
 				AF974ECF23736CA5000CD588 /* ArmsPosition.swift */,
 				AF974ECD23736CA5000CD588 /* Bodypart.swift */,
-				AF974ECA23736CA5000CD588 /* FaustoKit.swift */,
 				AF974ECE23736CA5000CD588 /* LeftArmPosition.swift */,
 				AF974EC923736CA5000CD588 /* LeftLegPosition.swift */,
 				AF974ED023736CA5000CD588 /* LegsPosition.swift */,
@@ -591,7 +588,6 @@
 				AF974ED523736CA6000CD588 /* Bodypart.swift in Sources */,
 				AF974ED123736CA6000CD588 /* LeftLegPosition.swift in Sources */,
 				AF974ED723736CA6000CD588 /* ArmsPosition.swift in Sources */,
-				AF974ED223736CA6000CD588 /* FaustoKit.swift in Sources */,
 				359649031FB18CC000FC7ADC /* poseKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
