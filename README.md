@@ -1,4 +1,5 @@
-# poseKit
+![Banner - PoseKit](https://user-images.githubusercontent.com/17486329/68389459-c5b99f80-0141-11ea-912c-250bdda5cecc.png)
+
 
 
 **Note:** This project is not complete, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
@@ -15,7 +16,6 @@ Requirements:
 - Xcode 11+
 - Swift 5+ 
 
-## Installation and Usage ##
 
 ## References ##
 
@@ -23,9 +23,6 @@ Requirements:
 - [Apple’s ARKit](https://developer.apple.com/documentation/arkit)
 - Demo Game using PoseKit (Link do jogo)
 
-## License ##
-
-PoseKit is released under the MIT license. See [LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
 
 
 
