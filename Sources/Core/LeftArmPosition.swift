@@ -44,17 +44,17 @@ class LeftArmPosition: ArmsPosition {
     }
     
     func forearmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
-        let lForearmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
-        let lHandCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lForearmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
+        let lArmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
+        let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
         
-        return "\(lForearmSubcase)"
+        return "\(lForearmCase)"
     }
     
     func armPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
-        let lForearmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
-        let lHandCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lForearmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
+        let lArmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
+        let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
 
-        return "\(lHandCase)"
+        return "\(lArmSubcase)"
     }
 
     
