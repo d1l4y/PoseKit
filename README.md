@@ -1,5 +1,7 @@
 [![Platforms](https://img.shields.io/cocoapods/p/poseKit.svg)](https://cocoapods.org/pods/poseKit) [![License](https://img.shields.io/cocoapods/l/poseKit.svg)](https://raw.githubusercontent.com/d1l4y/poseKit/master/LICENSE) [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![CocoaPods compatible](https://img.shields.io/cocoapods/v/poseKit.svg)](https://cocoapods.org/pods/poseKit) [![Travis](https://img.shields.io/travis/d1l4y/poseKit/master.svg)](https://travis-ci.org/d1l4y/poseKit/branches) [![SwiftFrameworkTemplate](https://img.shields.io/badge/SwiftFramework-Template-red.svg)](http://github.com/RahulKatariya/SwiftFrameworkTemplate)
 
+![Banner Git](https://user-images.githubusercontent.com/17486329/68477479-5bb9fc80-020c-11ea-8ebc-1b3ef5a0006b.png)
+
 
 **Note:** This project is not complete, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
 
