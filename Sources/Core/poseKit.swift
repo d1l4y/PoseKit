@@ -38,7 +38,7 @@ public class PoseKit {
 //        leg.legPos(character: character, bodyAnchor: bodyAnchor)
     }
     
-    public func retornaLeftArmJSON(character: BodyTrackedEntity, bodyAnchor: ARBodyAnchor) -> String {
+    public func retornaJSON(character: BodyTrackedEntity, bodyAnchor: ARBodyAnchor) -> String {
         
         let leftArmPos = LeftArmPosition(character: character, bodyAnchor: bodyAnchor)
         let rightArmPos = RightArmPosition(character: character, bodyAnchor: bodyAnchor)
