@@ -45,6 +45,22 @@ class RightArmPosition: ArmsPosition {
         
     }
     
+    func forearmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
+        
+        let rForearmSubcase = RightShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
+        let rHandCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: rForearmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
+        
+        return "\(rForearmSubcase)"
+    }
+    
+    func armPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
+        
+        let rForearmSubcase = RightShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
+        let rHandCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: rForearmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
+        
+        return "\(rHandCase)"
+    }
+    
     
     /// posição do  cotovelo em relaçao ao ombro pra saber onde ele está
     func RightShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, rHandTransform: simd_float4, rForearmTransform: simd_float4, rShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {

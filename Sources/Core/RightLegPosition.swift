@@ -44,7 +44,23 @@ class RightLegPosition : LegsPosition {
     func rLegPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor){
 
         let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
-        let lKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
+        let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
         
+    }
+    
+    func legPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
+
+        let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
+        let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
+        
+        return "\(rLegToKneeSubcase)"
+    }
+    
+    func forelegPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
+
+        let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
+        let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
+        
+        return "\(rKneeToFootCase)"
     }
 }
