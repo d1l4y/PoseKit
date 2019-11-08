@@ -2,36 +2,30 @@
 
 ![Banner - PoseKit](https://user-images.githubusercontent.com/17486329/68389459-c5b99f80-0141-11ea-912c-250bdda5cecc.png)
 
-
-
 **Note:** This project is not complete, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
-
-Feel free to contribute by submitting a pull request.
 
 ## Overview ##
 PoseKit uses Apple’s ARKit to track a real person’s body on camera, capture their motion and apply those body movements to a virtual 3D puppet. 
 
-## Features ##
+## Summary ##
 
-Requirements:
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [References](#references)
+- [Author](#author)
+- [License](#license)
+
+## Requirements ##
 - macOs Catalina/iOS 13+
 - Xcode 11+
 - Swift 5+ 
-
 
 ## References ##
 
 - [WWDC 2019 session 607: Bringing People into AR](https://developer.apple.com/videos/play/wwdc2019/607)
 - [Apple’s ARKit](https://developer.apple.com/documentation/arkit)
 - Demo Game using PoseKit (Link do jogo)
-
-
-sumario aqui
-
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
 
 ## Requirements
 
@@ -161,8 +155,6 @@ $ git submodule update --init --recursive
 - And that's it!
 
 </p></details>
-
-## Usage
 
 ## Contributing
 
