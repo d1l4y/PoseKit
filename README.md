@@ -162,7 +162,8 @@ Issues and pull requests are welcome!
 
 ## Author
 
-Vinicius Dilay, Isabela Castro, Leonardo Palinkas, Lucas Ronnau, Saulo da Silva [@twitter aqui](https://twitter.com/twitter aqui)
+[Vinicius Dilay](https://github.com/d1l4y), [Isabela Castro](https://github.com/isacastro), [Leonardo Palinkas](https://github.com/LeonardoPalinkas), [Lucas Ronnau](https://github.com/lucasronnau), [Saulo da Silva](https://github.com/sau-tech) 
+- [Discord](https://discord.gg/ssmGeb)
 
 ## License
 
