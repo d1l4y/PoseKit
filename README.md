@@ -159,6 +159,7 @@ $ git submodule update --init --recursive
 ## Contributing
 
 Issues and pull requests are welcome!
+To learn more see [Contributor Covenant](https://www.contributor-covenant.org/).
 
 ## Author
 
