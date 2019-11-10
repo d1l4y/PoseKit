@@ -6,7 +6,7 @@
 **Note:** This project is not complete, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
 
 ## Overview ##
-PoseKit uses Apple’s ARKit to track a real person’s body on camera, capture their motion and apply those body movements to a virtual 3D puppet. 
+PoseKit is a Library that uses ARKit and RealityKit to track a body position and return the position in a json. It has more than 4 million of different position possibilities
 
 ## Summary ##
 
