@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'poseKit'
+  s.name = 'PoseKit'
   s.version = '0.3.0'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'ARKit3 and RealityKit library for Body Position Tracking'

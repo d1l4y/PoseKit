@@ -10,7 +10,7 @@ import ARKit
 import RealityKit
 @available(iOS 13.0, *)
 
-class RightLegPosition : LegsPosition {
+internal class RightLegPosition : LegsPosition {
 
     var rKneeTransform : simd_float4!
     var rootTransform : simd_float4!
@@ -32,13 +32,6 @@ class RightLegPosition : LegsPosition {
         rFootTransform = bodyAnchor.skeleton.jointModelTransforms[rFootIndex].columns.3
         rLegTransform = bodyAnchor.skeleton.jointModelTransforms[rLegIndex].columns.3
         
-//        let vectorRightFootToLeg = vector(joint1: rFootTransform, joint2: rLegTransform)
-//        let vectorRootRightLeg = vector(joint1: rootTransform, joint2: rLegTransform)
-//
-//        let vectorRightLegToKnee = vector(joint1: rKneeTransform, joint2: rLegTransform)
-//        let vectorRightLegFoot = vector(joint1: rLegTransform, joint2: rFootTransform)
-//
-//        let anguloJD = angle(vector1: vectorRightLegToKnee, vector2: vectorRightLegFoot)
     }
     
     func rLegPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor){

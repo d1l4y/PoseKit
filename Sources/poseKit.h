@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ARKit/ARKit.h>
+#import <PoseKit/PoseKit.h>
 
 //! Project version number for poseKit.
 FOUNDATION_EXPORT double poseKitVersionNumber;

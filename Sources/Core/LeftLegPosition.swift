@@ -10,7 +10,7 @@ import ARKit
 import RealityKit
 @available(iOS 13.0, *)
 
-class LeftLegPosition : LegsPosition {
+internal class LeftLegPosition : LegsPosition {
     
     var lKneeTransform : simd_float4!
     var rootTransform : simd_float4!

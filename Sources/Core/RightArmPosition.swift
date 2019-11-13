@@ -11,7 +11,7 @@ import ARKit
 import RealityKit
 @available(iOS 13.0, *)
 
-class RightArmPosition: ArmsPosition {
+internal class RightArmPosition: ArmsPosition {
 
     //Pega o transform global das joints(coordenadas em relação a root)
     var rShoulderTransform : simd_float4!

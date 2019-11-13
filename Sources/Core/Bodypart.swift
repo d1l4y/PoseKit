@@ -11,16 +11,8 @@ import ARKit
 import RealityKit
 @available(iOS 13.0, *)
 
-class BodyPart {
-
-    func distance( joint1: simd_float4, joint2: simd_float4) -> Float{
-        let x = powf((joint1.x - joint2.x),2)
-        let y = powf((joint1.y - joint2.y),2)
-        let z = powf((joint1.z - joint2.z),2)
-        return sqrtf(x + y + z)
-    }
+internal class BodyPart {
     
-
     func vector( joint1: simd_float4, joint2: simd_float4) -> simd_float3{
         let vector : simd_float3 = [joint2.x - joint1.x, joint2.y - joint1.y, joint2.z - joint1.z]
     
@@ -46,5 +38,3 @@ class BodyPart {
         
     }
 }
-
-

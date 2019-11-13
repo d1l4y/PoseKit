@@ -40,8 +40,8 @@ class ArmsPosition  {
 
             let forearmAngle = abs(bodyPart.angle(vector1: handForearmVector, vector2: shoulderForearmVector))
             let crossVector = (simd_normalize(simd_cross(handForearmVector, shoulderForearmVector))) //produto vetorial deve bastar para saber o sentido
-            
-            if bodyPart.distance(joint1: ShoulderTransform, joint2: HandTransform) > 0.57 && forearmAngle > 125.0 {
+    
+            if simd_distance(ShoulderTransform, HandTransform) > 0.57 && forearmAngle > 125.0 {
                 return .retoOutstretched    //braço esticados
             } else if crossVector.z < 0 {   //braço pra baixo
                 if forearmAngle > 105.0 { return .bentDownOut }

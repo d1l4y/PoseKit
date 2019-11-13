@@ -13,7 +13,7 @@ import RealityKit
 //ver casos com as duas pernas (de pé, agachado, sentado, etc)
 
 @available(iOS 13.0, *)
-class LegsPosition  {
+internal class LegsPosition  {
     let bodyPart = BodyPart()
     
     
