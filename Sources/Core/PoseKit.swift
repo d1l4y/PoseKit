@@ -29,16 +29,8 @@ public class PoseKit {
         var position_rightForeleg: bodyPosition
     }
     
-    public func BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) {
-        let leftArmPos = LeftArmPosition(character: character, bodyAnchor: bodyAnchor)
-        let rightArmPos = RightArmPosition(character: character, bodyAnchor: bodyAnchor)
-        leftArmPos.lArmPosition(character: character, bodyAnchor: bodyAnchor)
-        rightArmPos.rArmPosition(character: character, bodyAnchor: bodyAnchor)
-//        leftLeg.LeftLegPos(character: character, bodyAnchor: bodyAnchor)
-//        leg.legPos(character: character, bodyAnchor: bodyAnchor)
-    }
-    
-    public func retornaJSON(character: BodyTrackedEntity, bodyAnchor: ARBodyAnchor) -> String {
+
+    public func BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
         
         let leftArmPos = LeftArmPosition(character: character, bodyAnchor: bodyAnchor)
         let rightArmPos = RightArmPosition(character: character, bodyAnchor: bodyAnchor)
@@ -77,7 +69,6 @@ public class PoseKit {
             if let jsonString = String(data: jsonData, encoding: .utf8) {
                 print("JSON: \(jsonString)")
 
-    //                self.createAlert(jsonString)
                 str = jsonString
             }
         } catch {
