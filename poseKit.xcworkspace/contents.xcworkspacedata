@@ -38,7 +38,8 @@
       location = "group:Package.swift">
    </FileRef>
    <FileRef
-      location = "group:Package@swift-4.2.swift">
+      location = "group:/Users/dilay/Desktop/appleDevAcademy/newPose/poseKit/Package@swift-5.swift"
+      assignedFileDataType = "public.swift-source">
    </FileRef>
    <FileRef
       location = "group:Package.resolved">
