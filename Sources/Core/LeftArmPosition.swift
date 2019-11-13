@@ -36,20 +36,11 @@ internal class LeftArmPosition: ArmsPosition {
         
     }
     
-    func forearmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
+    func lArmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> armCases{
         let lArmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
         let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
-        
-        return "\(lForearmCase)"
+        return armCases(ArmCase: lArmSubcase, HandCase: lForearmCase)
     }
-    
-    func armPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
-        let lArmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
-        let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
-
-        return "\(lArmSubcase)"
-    }
-
     
 /// posição do  cotovelo em relaçao ao ombro pra saber onde ele está
     func LeftShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, lHandTransform: simd_float4, lForearmTransform: simd_float4, lShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {

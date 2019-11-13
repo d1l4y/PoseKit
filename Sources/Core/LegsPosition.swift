@@ -16,6 +16,10 @@ import RealityKit
 internal class LegsPosition  {
     let bodyPart = BodyPart()
     
+    struct legCases {
+        let legCase : LegToKneeSubcase
+        let kneeCase: KneeToFootCase
+    }
     
     func LegToKneePos( kneeTransform: simd_float4, legTransform: simd_float4) -> LegToKneeSubcase {
         let vectorLegToKnee = bodyPart.vector(joint1: kneeTransform, joint2: legTransform)

@@ -33,21 +33,13 @@ internal class RightArmPosition: ArmsPosition {
         self.rHandTransform = bodyAnchor.skeleton.jointModelTransforms[rHandIndex].columns.3
   
     }
-    
-    func forearmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
+        
+    func rArmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> armCases {
         
         let rArmSubcase = RightShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
         let rForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: rArmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
         
-        return "\(rForearmCase)"
-    }
-    
-    func armPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
-        
-        let rArmSubcase = RightShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
-        let rForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: rArmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
-        
-        return "\(rArmSubcase)"
+        return armCases(ArmCase: rArmSubcase, HandCase: rForearmCase)
     }
     
     

@@ -34,19 +34,12 @@ internal class RightLegPosition : LegsPosition {
         
     }
 
-    func legPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
+    func rLegPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> legCases{
 
         let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
         let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
         
-        return "\(rLegToKneeSubcase)"
+        return legCases(legCase: rLegToKneeSubcase, kneeCase: rKneeToFootCase)
     }
-    
-    func forelegPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
 
-        let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
-        let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
-        
-        return "\(rKneeToFootCase)"
-    }
 }

@@ -18,11 +18,6 @@ public class PoseKit {
         var position : String
     }
     
-    struct legCases {
-        let legCase : LegToKneeCase
-        let kneeCase: KneeToFootCase
-    }
-    
     struct json_BodyPositions: Codable {
         var position_leftArm: bodyPosition
         var position_leftForearm: bodyPosition
@@ -42,23 +37,19 @@ public class PoseKit {
         let leftLegPos = LeftLegPosition(character: character, bodyAnchor: bodyAnchor)
         let rightLegPos = RightLegPosition(character: character, bodyAnchor: bodyAnchor)
             
-        let position_leftArm = leftArmPos.armPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_rightArm = rightArmPos.armPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_leftForearm = leftArmPos.forearmPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_rightForearm = rightArmPos.forearmPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_leftLeg = leftLegPos.legPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_rightLeg = rightLegPos.legPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_leftForeleg = leftLegPos.forelegPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_rightForeleg = rightLegPos.forelegPosition(character: character, bodyAnchor: bodyAnchor)
-        
-        let pos_leftArm = bodyPosition(name: "leftArm", position: position_leftArm)
-        let pos_leftForearm = bodyPosition(name: "leftForearm", position: position_leftForearm)
-        let pos_rightArm = bodyPosition(name: "rightArm", position: position_rightArm)
-        let pos_rightForearm = bodyPosition(name: "rightForearm", position: position_rightForearm)
-        let pos_leftLeg = bodyPosition(name: "leftLeg", position: position_leftLeg)
-        let pos_leftForeleg = bodyPosition(name: "leftForeleg", position: position_leftForeleg)
-        let pos_rightLeg = bodyPosition(name: "rightLeg", position: position_rightLeg)
-        let pos_rightForeleg = bodyPosition(name: "rightForeleg", position: position_rightForeleg)
+        let position_rightArm = rightArmPos.rArmPosition(character: character, bodyAnchor: bodyAnchor)
+        let position_leftArm = leftArmPos.lArmPosition(character: character, bodyAnchor: bodyAnchor)
+        let position_leftLeg = leftLegPos.lLegPosition(character: character, bodyAnchor: bodyAnchor)
+        let position_rightLeg = rightLegPos.rLegPosition(character: character, bodyAnchor: bodyAnchor)
+     
+        let pos_leftArm = bodyPosition(name: "leftArm", position: "\(position_leftArm.ArmCase)")
+        let pos_leftForearm = bodyPosition(name: "leftForearm", position: "\(position_leftArm.HandCase)")
+        let pos_rightArm = bodyPosition(name: "rightArm", position: "\(position_rightArm.ArmCase)")
+        let pos_rightForearm = bodyPosition(name: "rightForearm", position: "\(position_rightArm.HandCase)")
+        let pos_leftLeg = bodyPosition(name: "leftLeg", position: "\(position_leftLeg.legCase)")
+        let pos_leftForeleg = bodyPosition(name: "leftForeleg", position: "\(position_leftLeg.kneeCase)")
+        let pos_rightLeg = bodyPosition(name: "rightLeg", position: "\(position_rightLeg.legCase)")
+        let pos_rightForeleg = bodyPosition(name: "rightForeleg", position: "\(position_rightLeg.legCase)")
         
         let bodyPositions = json_BodyPositions(position_leftArm: pos_leftArm, position_leftForearm: pos_leftForearm, position_rightArm: pos_rightArm, position_rightForearm: pos_rightForearm, position_leftLeg: pos_leftLeg, position_leftForeleg: pos_leftForeleg, position_rightLeg: pos_rightLeg, position_rightForeleg: pos_rightForeleg)
         
