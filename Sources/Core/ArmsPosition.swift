@@ -15,6 +15,11 @@ import RealityKit
 class ArmsPosition  {
     let bodyPart = BodyPart()
 
+    struct armCases {
+        let ArmCase : ShoulderToForearmSubcase
+        let HandCase: ForearmToHandSubcase
+    }
+    
     
     /// posição do  cotovelo em relaçao ao ombro pra saber onde ele está
     func ShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmCase {

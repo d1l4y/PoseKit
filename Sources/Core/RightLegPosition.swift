@@ -33,14 +33,7 @@ internal class RightLegPosition : LegsPosition {
         rLegTransform = bodyAnchor.skeleton.jointModelTransforms[rLegIndex].columns.3
         
     }
-    
-    func rLegPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor){
 
-        let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)
-        let rKneeToFootCase = KneeToFootPos(kneeTransform: rKneeTransform, legTransform: rLegTransform, footTransform: rFootTransform, legToKneeSubcase: rLegToKneeSubcase)
-        
-    }
-    
     func legPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String{
 
         let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)

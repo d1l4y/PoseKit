@@ -18,6 +18,11 @@ public class PoseKit {
         var position : String
     }
     
+    struct legCases {
+        let legCase : LegToKneeCase
+        let kneeCase: KneeToFootCase
+    }
+    
     struct json_BodyPositions: Codable {
         var position_leftArm: bodyPosition
         var position_leftForearm: bodyPosition
