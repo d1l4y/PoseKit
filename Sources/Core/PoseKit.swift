@@ -9,8 +9,6 @@
 import ARKit
 import RealityKit
 
-// interface de comunicação com o resto do programa (facade pattern)
-@available(iOS 13.0, *)
 public class PoseKit {
     
     struct bodyPosition: Codable {
@@ -78,7 +76,6 @@ public class PoseKit {
 
 
 
-@available(iOS 13.0, *)
 extension BodyTrackedEntity {
     func jointName(forPath path: String) -> ARSkeleton.JointName {
         let splitPath = path.split(separator: "/")

@@ -6,11 +6,9 @@
 //  Copyright © 2019 Apple. All rights reserved.
 //
 
-import Foundation
 import ARKit
 import RealityKit
 
-@available(iOS 13.0, *)
 internal class LeftArmPosition: ArmsPosition {
 
     
