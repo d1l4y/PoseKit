@@ -10,9 +10,7 @@ import ARKit
 import RealityKit
 
 
-//ver casos com as duas pernas (de pé, agachado, sentado, etc)
-
-@available(iOS 13.0, *)
+/// This class gets the positions of the legs by creating vectors from a joint to another and comparing the axes and angles.
 internal class LegsPosition  {
     let bodyPart = BodyPart()
     
@@ -21,11 +19,11 @@ internal class LegsPosition  {
         let kneeCase: KneeToFootCase
     }
     
+/// Get's the **upper leg's** position related to the **knee** by comparing the Y axe.
     func LegToKneePos( kneeTransform: simd_float4, legTransform: simd_float4) -> LegToKneeSubcase {
         let vectorLegToKnee = bodyPart.vector(joint1: kneeTransform, joint2: legTransform)
         let legToKneeCase: LegToKneeCase
         
-        //         print(vectorLegToKnee.y)//, "eixo z: ", vectorLegToKnee.z)
         if vectorLegToKnee.y < 0.15 { legToKneeCase = .Open }
         else if vectorLegToKnee.y < 0.35 { legToKneeCase = .halfOpen }
         else { legToKneeCase = .straight }
@@ -33,10 +31,10 @@ internal class LegsPosition  {
         return LegToKneePosZ(kneeTransform: kneeTransform, legTransform: legTransform, legToKneeCase: legToKneeCase )
     }
     
-    
+/// Get's the **upper leg's** position related to the **knee** by comparing the Z axe.
     func LegToKneePosZ(kneeTransform: simd_float4, legTransform: simd_float4, legToKneeCase : LegToKneeCase) -> LegToKneeSubcase {
         let vectorLegToKnee = bodyPart.vector(joint1: legTransform, joint2: kneeTransform)
- //print(vectorLegToKnee.z)
+        
         if legToKneeCase == .straight {
             if vectorLegToKnee.z < -0.1 { return .straightBack }
             else {return .straightParallel }
@@ -51,14 +49,13 @@ internal class LegsPosition  {
         }
     }
     
-    
+    /// Get's the **knee's** position related to the **foot** by comparing the angle between the knee and the upper leg.
     func KneeToFootPos(kneeTransform: simd_float4, legTransform: simd_float4, footTransform: simd_float4, legToKneeSubcase: LegToKneeSubcase ) -> KneeToFootCase {
-
         let vectorLegToKnee = bodyPart.vector(joint1: kneeTransform, joint2: legTransform)
         let vectorKneeToFoot = bodyPart.vector(joint1: kneeTransform, joint2: footTransform)
         
         let kneeBentAngle = bodyPart.angle(vector1: vectorLegToKnee, vector2: vectorKneeToFoot)
-//        print(kneeBentAngle)
+
         if kneeBentAngle > 125 {return .outstretched}
         else if kneeBentAngle > 100 {return .bentOut}
         else if kneeBentAngle > 60 {return .bent}

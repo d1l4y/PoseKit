@@ -9,26 +9,66 @@
 import ARKit
 import RealityKit
 
+/// PoseKit's main class.
 public class PoseKit {
     
+    /// Body part and position.
     struct bodyPosition: Codable {
+        
+    /**
+         Name of the body part.
+         ## Example ##
+            rightLeg, leftArm.
+    */
         var name : String
+        
+    /**
+        Name of the body part's position.
+        ## Example ##
+         leftForearmUp, rightArmBent.
+    */
         var position : String
     }
     
+    /// Uses **struct bodyPosition: Codable {** and contains all body parts.
     struct json_BodyPositions: Codable {
+        
+        /// Left upper arm's position.
         var position_leftArm: bodyPosition
+        
+        /// Left forearm position.
         var position_leftForearm: bodyPosition
+        
+        /// Right upper arm's position.
         var position_rightArm: bodyPosition
+        
+        /// Right forearm's position.
         var position_rightForearm: bodyPosition
+        
+        /// Left upper leg's position.
         var position_leftLeg: bodyPosition
+        
+        /// Left lower leg's position.
         var position_leftForeleg: bodyPosition
+        
+        /// Right upper leg's position.
         var position_rightLeg: bodyPosition
+        
+        /// Right lower leg's position.
         var position_rightForeleg: bodyPosition
     }
     
     public init(){}
     
+    /**
+        Returns a JSON and the configurations of each used class.
+        
+        1. It gets the positions of each member and returns a value.
+        2. Gets the positions.
+        3. Gets a JSON to each member case.
+        4. Instantiates the JSON.
+        5. Returns a JSON string.
+    */
     public func BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
         
         let leftArmPos = LeftArmPosition(character: character, bodyAnchor: bodyAnchor)
@@ -78,6 +118,8 @@ public class PoseKit {
 
 
 extension BodyTrackedEntity {
+    
+    /// Returns a joint name from ARSkeleton - created by @valengo
     func jointName(forPath path: String) -> ARSkeleton.JointName {
         let splitPath = path.split(separator: "/")
         return ARSkeleton.JointName(rawValue: String(splitPath[splitPath.count - 1]))

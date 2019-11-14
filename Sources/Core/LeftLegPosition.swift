@@ -9,13 +9,19 @@
 import ARKit
 import RealityKit
 
+/// This class is responsible for the **left leg**.
 internal class LeftLegPosition : LegsPosition {
     
+    /// Knee's global coordinates.
     var lKneeTransform : simd_float4!
+    /// Root's global coordinates.
     var rootTransform : simd_float4!
+    /// Foot's global coordinates.
     var lFootTransform : simd_float4!
+    /// Leg's global coordinates.
     var lLegTransform : simd_float4!
     
+/// Initiates the class and looks for the left knee and leg joint by getting the joint's index and global coordinates to the root.
     init(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) {
         
         guard let lKnee = character?.jointName(forPath: "left_leg_joint") else { print("falha de leitura left leg"); return}
@@ -26,7 +32,6 @@ internal class LeftLegPosition : LegsPosition {
         let lLegIndex = ARSkeletonDefinition.defaultBody3D.index(for: lLeg)
         
 
-        //Pega o transform global das joints(coordenadas em relação a root)
 
         lKneeTransform = bodyAnchor.skeleton.jointModelTransforms[lKneeIndex].columns.3
         rootTransform = bodyAnchor.skeleton.jointModelTransforms[rootIndex].columns.3
@@ -35,7 +40,7 @@ internal class LeftLegPosition : LegsPosition {
         
     }
     
-    
+/// Calculates the **leg's position**.
     func lLegPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> legCases{
         
         let lLegToKneeSubcase = LegToKneePos( kneeTransform: lKneeTransform, legTransform: lLegTransform)

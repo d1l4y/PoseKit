@@ -11,12 +11,14 @@ import RealityKit
 
 internal class BodyPart {
     
+    /// Calculates the **coordinates** of joints
     func vector( joint1: simd_float4, joint2: simd_float4) -> simd_float3{
         let vector : simd_float3 = [joint2.x - joint1.x, joint2.y - joint1.y, joint2.z - joint1.z]
     
         return vector
     }
     
+    /// Calculates the **angles** between two joints.
     func angle( vector1: simd_float3, vector2: simd_float3) -> Float{
         let x = powf(vector1.x, 2) + powf(vector1.y, 2) + powf(vector1.z, 2)
         let y = powf(vector2.x, 2) + powf(vector2.y, 2) + powf(vector2.z, 2)
@@ -26,6 +28,7 @@ internal class BodyPart {
         return acosf(z/k)*360/(2*Float.pi)
     }
     
+    /// Calculates the **angles** between two joints.
     func angle( vector1: simd_float4, vector2: simd_float4) -> Float{
         let x = powf(vector1.x, 2) + powf(vector1.y, 2) + powf(vector1.z, 2)
         let y = powf(vector2.x, 2) + powf(vector2.y, 2) + powf(vector2.z, 2)

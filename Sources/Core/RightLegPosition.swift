@@ -9,13 +9,19 @@
 import ARKit
 import RealityKit
 
+/// This class is responsible for the **right leg**.
 internal class RightLegPosition : LegsPosition {
 
+    /// **Knee's** global coordinates.
     var rKneeTransform : simd_float4!
+    /// **Root's** global coordinates.
     var rootTransform : simd_float4!
+    /// **Foot's** global coordinates.
     var rFootTransform : simd_float4!
+    /// **Leg's** global coordinates.
     var rLegTransform : simd_float4!
 
+/// Initiates the class and looks for the right knee and leg joint by getting the joint's index and global coordinates to the root.
     init(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) {
     
         guard let rKnee = character?.jointName(forPath: "right_leg_joint") else { print("falha de leitura right leg"); return}
@@ -33,6 +39,7 @@ internal class RightLegPosition : LegsPosition {
         
     }
 
+/// Calculates the **leg's position**.
     func rLegPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> legCases{
 
         let rLegToKneeSubcase = LegToKneePos( kneeTransform: rKneeTransform, legTransform: rLegTransform)

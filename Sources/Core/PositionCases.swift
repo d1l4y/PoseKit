@@ -8,73 +8,75 @@
 
 import Foundation
 
-///ArmCases
+/// Upper arm's position cases
 public enum ShoulderToForearmCase {
     case verticalUp
     case verticalDown
     case horizontal
 }
 
+/// Upper arm's position subcases.
 public enum ShoulderToForearmSubcase {
-//    case outstretched   // esticado
-    case verticalUpDiagonalFront     //para cima e para frente
-    case verticalUpParallel     //para cima e reto
-    case verticalUpTransverse  //para cima totalmente reto(p frente)
-    case verticalDownDiagonalFront      //para baixo e para frente
-    case verticalDownDiagonalBack       //para baixo e para tras
-    case verticalDownParallel   //para baixo e reto
-    case verticalDownTransverse //para baixo totalmente reto(pra frente)
-    case horizontalParallel       // ¯\(°_o)/¯ (╯°□°)╯
-    case horizontalDiagonalBack         //reto e para tras
+    case verticalUpDiagonalFront
+    case verticalUpParallel
+    case verticalUpTransverse
+    case verticalDownDiagonalFront
+    case verticalDownDiagonalBack
+    case verticalDownParallel
+    case verticalDownTransverse
+    case horizontalParallel
+    case horizontalDiagonalBack
     case horizontalDiagonalFront
     case horizontalTransverse
 }
 
+/// Forearm's position cases.
 public enum ForearmToHandForearmCase {
-    case straightHorizontal       //reto
-    case bentUp     //dobrado pra cima
-    case bentDown   //dobrado pra baixo
+    case straightHorizontal
+    case bentUp
+    case bentDown
 }
 
+/// Forearm's position subcases.
 public enum ForearmToHandSubcase {
-    case straightHorizontal //reto esticado
-    case horizontalBentIn //reto dobrado pra frente
-    case bentUp         //dobrado pra cima-reto
-    case bentUpOut      //dobrado pra cima-fora
-    case bentUpIn       //dobrado pra cima-dentro
-    case bentDown       //dobrado pra baixo-reto
-    case bentDownOut    //dobrado pra baixo-fora
-    case bentDownIn     //dobrado pra baixo-dentro
+    case straightHorizontal
+    case horizontalBentIn
+    case bentUp
+    case bentUpOut
+    case bentUpIn
+    case bentDown
+    case bentDownOut
+    case bentDownIn
 }
 
-
-///legCases
+/// Upper leg's position cases.
 public enum LegToKneeCase {
-    case straight //perna reta
-    case halfOpen //perna meio-aberta
-    case Open     //perna totalmente aberta
+    case straight
+    case halfOpen
+    case Open
 }
 
-//depende do eixo y e z
+/// Upper leg's position subcases.
 public enum LegToKneeSubcase {
-    case straightParallel   //perna reta e reta pra baixo
-    case straightBack   //perna reta más pra trás
-    case halfOpenDiagonal //perna meio aberta e meio pra frente
-    case halfOpenParallel       //perna meio aberta e reta
-    case halfOpenTransversal      //perna meio aberta e para frente
-    case openParallel           //perna aberta e reta
-    case openDiagonal    //perna aberta e meio pra frente
-    case openTransversal          //perna aberta pra frente
+    case straightParallel
+    case straightBack
+    case halfOpenDiagonal
+    case halfOpenParallel
+    case halfOpenTransversal
+    case openParallel
+    case openDiagonal
+    case openTransversal
 }
 
-//depende do angulo
+/// Lower leg's position cases.
 public enum KneeToFootCase {
-    case outstretched       //esticada
-    case bentOut        //um pouco dobrada
-    case bent           //dobrada
-    case bentIn         //muito dobrada
+    case outstretched
+    case bentOut
+    case bent
+    case bentIn
 }
 
+/// Both leg's position cases.
 public enum BothLegsCase {
     
 }

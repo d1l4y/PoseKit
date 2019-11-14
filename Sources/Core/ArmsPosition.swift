@@ -9,7 +9,7 @@
 import ARKit
 import RealityKit
 
-
+/// This class gets the positions of the **arms** by creating vectors from a joint to another and comparing the axes and angles.
 internal class ArmsPosition  {
     let bodyPart = BodyPart()
 
@@ -19,7 +19,7 @@ internal class ArmsPosition  {
     }
     
     
-    /// posição do  cotovelo em relaçao ao ombro pra saber onde ele está
+    /// Gets the **elbow's** position related to the **shoulder** by comparing the Y axe.
     func ShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmCase {
             let forearmShoulderVector : simd_float3 = [ForearmTransform.x - ShoulderTransform.x, ForearmTransform.y - ShoulderTransform.y, ForearmTransform.z - ShoulderTransform.z] //ajeitar
            
@@ -35,7 +35,7 @@ internal class ArmsPosition  {
             }
         }
     
-    /// posição da mão em relaçao ao cotovelo pra saber onde ela está
+    /// Gets the **hand's** position related to the **elbow** by comparing the angle between the forearm and the upper arm.
         func ForearmToHandPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmSubcase: ShoulderToForearmSubcase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ForearmToHandSubcase {
 
             let handForearmVector = bodyPart.vector(joint1: ForearmTransform, joint2: HandTransform)
@@ -61,7 +61,7 @@ internal class ArmsPosition  {
             return .horizontalBentIn
         }
     
-    /// chamada em ShoulderToForearmPos, compara o eixo z pra classificar o cotovelo
+    /// Compares the **X axe** to classify the elbow's position.  Should be called at **ShoulderToForearmPos**
     func ShoulderToForearmPosZ(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmCase: ShoulderToForearmCase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
         let forearmShoulderVector  = bodyPart.vector(joint1: ShoulderTransform, joint2: ForearmTransform)
         
