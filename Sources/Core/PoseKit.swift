@@ -27,7 +27,7 @@ public class PoseKit {
         var position_rightForeleg: bodyPosition
     }
     
-    public init () {}
+    public init(){}
     
     public func BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
         

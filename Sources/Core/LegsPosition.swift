@@ -39,15 +39,15 @@ internal class LegsPosition  {
  //print(vectorLegToKnee.z)
         if legToKneeCase == .straight {
             if vectorLegToKnee.z < -0.1 { return .straightBack }
-            else {return .straightReto }
+            else {return .straightParallel }
         } else if legToKneeCase == .halfOpen{
-            if vectorLegToKnee.z < 0.05 { return .halfOpenReto}
-            else if vectorLegToKnee.z < 0.15 { return .halfOpenMiddleFront}
-            else {return .halfOpenFront}
+            if vectorLegToKnee.z < 0.05 { return .halfOpenParallel}
+            else if vectorLegToKnee.z < 0.15 { return .halfOpenDiagonal}
+            else {return .halfOpenTransversal}
         } else {
-            if vectorLegToKnee.z < 0.05 { return .openReto}
-            else if vectorLegToKnee.z < 0.15 { return .openMiddleFront}
-            else { return .openFront}
+            if vectorLegToKnee.z < 0.05 { return .openParallel}
+            else if vectorLegToKnee.z < 0.15 { return .openDiagonal}
+            else { return .openTransversal}
         }
     }
     
@@ -59,7 +59,7 @@ internal class LegsPosition  {
         
         let kneeBentAngle = bodyPart.angle(vector1: vectorLegToKnee, vector2: vectorKneeToFoot)
 //        print(kneeBentAngle)
-        if kneeBentAngle > 125 {return .straight}
+        if kneeBentAngle > 125 {return .outstretched}
         else if kneeBentAngle > 100 {return .bentOut}
         else if kneeBentAngle > 60 {return .bent}
         else {return .bentIn}

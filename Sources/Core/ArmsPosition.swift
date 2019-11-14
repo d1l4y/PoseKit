@@ -10,7 +10,7 @@ import ARKit
 import RealityKit
 
 
-class ArmsPosition  {
+internal class ArmsPosition  {
     let bodyPart = BodyPart()
 
     struct armCases {
@@ -25,13 +25,13 @@ class ArmsPosition  {
            
             //compara pelo eixo y (altura)
             if forearmShoulderVector.y < -0.1  { //cotovelo baixo
-                return .down
+                return .verticalDown
             }
             else if  forearmShoulderVector.y > 0.1  { //alto
-                return .up
+                return .verticalUp
             }
             else { //medio
-                return .straight
+                return .horizontal
             }
         }
     
@@ -45,7 +45,7 @@ class ArmsPosition  {
             let crossVector = (simd_normalize(simd_cross(handForearmVector, shoulderForearmVector))) //produto vetorial deve bastar para saber o sentido
     
             if simd_distance(ShoulderTransform, HandTransform) > 0.57 && forearmAngle > 125.0 {
-                return .retoOutstretched    //braço esticados
+                return .straightHorizontal   //braço esticados
             } else if crossVector.z < 0 {   //braço pra baixo
                 if forearmAngle > 105.0 { return .bentDownOut }
                 else if forearmAngle > 80 { return .bentDown }
@@ -58,7 +58,7 @@ class ArmsPosition  {
                 else if forearmAngle > 55 { return .bentUpIn }
             
             }
-            return .bentRetoFront
+            return .horizontalBentIn
         }
     
     /// chamada em ShoulderToForearmPos, compara o eixo z pra classificar o cotovelo
@@ -66,29 +66,29 @@ class ArmsPosition  {
         let forearmShoulderVector  = bodyPart.vector(joint1: ShoulderTransform, joint2: ForearmTransform)
         
         switch forearmCase {
-        case .down:
+        case .verticalDown:
             if forearmShoulderVector.z < -0.05 {
-                return .downBack    //pra baixo pra tras
+                return .verticalDownDiagonalBack    //pra baixo pra tras
             } else if forearmShoulderVector.z > 0.05 {
-                if forearmShoulderVector.z > 0.2 {return .downTotFront} else {return .downFront} //pra tras pra frente ou totalmente pra frente
+                if forearmShoulderVector.z > 0.2 {return .verticalDownTransverse} else {return .verticalDownDiagonalBack} //pra tras pra frente ou totalmente pra frente
             } else {
-                return .downStraight //pra trás reto
+                return .verticalUpParallel //pra trás reto
             }
             
-        case .up:
+        case .verticalUp:
             if forearmShoulderVector.z > 0.05 { //mais pra frente
-                if forearmShoulderVector.z > 0.2 {return .upTotFront} else {return .upFront}
+                if forearmShoulderVector.z > 0.2 {return .verticalUpTransverse} else {return .verticalUpDiagonalFront}
             } else {
-                return .upStraight //pra frente reto
+                return .verticalUpParallel //pra frente reto
             }
             
-        case .straight:
+        case .horizontal:
             if forearmShoulderVector.z < -0.05 { //&& forearmCase != .up { //mais pra tras
-                return .retoBack        //reto pra tras
+                return .horizontalDiagonalBack       //reto pra tras
             } else if forearmShoulderVector.z > 0.05 {
-                if forearmShoulderVector.z > 0.2 {return .retoTotFront} else {return .retoFrente}
+                if forearmShoulderVector.z > 0.2 {return .horizontalTransverse} else {return .horizontalDiagonalFront}
             } else {
-                return .reto
+                return .horizontalParallel
             }
             
         }
