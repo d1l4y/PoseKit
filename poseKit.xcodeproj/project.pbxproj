@@ -197,15 +197,15 @@
 		359649011FB18CBF00FC7ADC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				359649021FB18CBF00FC7ADC /* PoseKit.swift */,
 				AF974ECF23736CA5000CD588 /* ArmsPosition.swift */,
-				AF974ECD23736CA5000CD588 /* Bodypart.swift */,
 				AF974ECE23736CA5000CD588 /* LeftArmPosition.swift */,
 				AF974EC923736CA5000CD588 /* LeftLegPosition.swift */,
 				AF974ED023736CA5000CD588 /* LegsPosition.swift */,
 				AF974ECB23736CA5000CD588 /* RightArmPosition.swift */,
 				AF974ECC23736CA5000CD588 /* RightLegPosition.swift */,
-				359649021FB18CBF00FC7ADC /* PoseKit.swift */,
 				AF62250723743D7700011DF4 /* PositionCases.swift */,
+				AF974ECD23736CA5000CD588 /* Bodypart.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";

@@ -40,7 +40,7 @@ internal class LeftArmPosition: ArmsPosition {
 /// Calculates the arm's position and returns the **HandCase** and **ForearmSubcase**.
     func lArmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> armCases{
         let lArmSubcase = LeftShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, lHandTransform: lHandTransform, lForearmTransform: lForearmTransform, lShoulderTransform: lShoulderTransform)
-        let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform)
+        let lForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: lArmSubcase, HandTransform: lHandTransform, ForearmTransform: lForearmTransform, ShoulderTransform: lShoulderTransform, leftArm: true)
         return armCases(ArmCase: lArmSubcase, HandCase: lForearmCase)
     }
     

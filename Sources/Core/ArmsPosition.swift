@@ -36,30 +36,74 @@ internal class ArmsPosition  {
         }
     
     /// Gets the **hand's** position related to the **elbow** by comparing the angle between the forearm and the upper arm.
-        func ForearmToHandPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmSubcase: ShoulderToForearmSubcase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ForearmToHandSubcase {
+    func ForearmToHandPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmSubcase: ShoulderToForearmSubcase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4, leftArm: Bool) -> ForearmToHandSubcase {
 
-            let handForearmVector = bodyPart.vector(joint1: ForearmTransform, joint2: HandTransform)
-            let shoulderForearmVector  = bodyPart.vector(joint1: ForearmTransform, joint2: ShoulderTransform)
-
-            let forearmAngle = abs(bodyPart.angle(vector1: handForearmVector, vector2: shoulderForearmVector))
-            let crossVector = (simd_normalize(simd_cross(handForearmVector, shoulderForearmVector))) //produto vetorial deve bastar para saber o sentido
-    
-            if simd_distance(ShoulderTransform, HandTransform) > 0.57 && forearmAngle > 125.0 {
-                return .straightHorizontal   //braço esticados
-            } else if crossVector.z < 0 {   //braço pra baixo
+        let handForearmVector = bodyPart.vector(joint1: ForearmTransform, joint2: HandTransform)
+        let shoulderForearmVector  = bodyPart.vector(joint1: ForearmTransform, joint2: ShoulderTransform)
+        
+        let forearmAngle = abs(bodyPart.angle(vector1: handForearmVector, vector2: shoulderForearmVector))
+        let crossVector = (simd_normalize(simd_cross(handForearmVector, shoulderForearmVector))) //produto vetorial deve bastar para saber o sentido
+        
+        if simd_distance(ShoulderTransform, HandTransform) > 0.57 && forearmAngle > 125.0 {
+            return .straightHorizontal
+        }
+        if forearmSubcase == .verticalDownDiagonalBack || forearmSubcase == .verticalDownDiagonalFront || forearmSubcase == .verticalDownParallel || forearmSubcase == .horizontalTransverse {
+            return ForearmToHandDownCase(forearmAngle: forearmAngle, crossVector: crossVector, leftArm: leftArm)
+        } else if leftArm {
+            if crossVector.z < 0 {
                 if forearmAngle > 105.0 { return .bentDownOut }
                 else if forearmAngle > 80 { return .bentDown }
                 else if forearmAngle > 55 { return .bentDownIn }
-            
+                
             } else {
-
                 if forearmAngle > 105.0 { return .bentUpOut }
                 else if forearmAngle > 80 { return .bentUp }
                 else if forearmAngle > 55 { return .bentUpIn }
-            
             }
+        } else {
+            if crossVector.z < 0 {
+                if forearmAngle > 105.0 { return .bentUpOut }
+                else if forearmAngle > 80 { return .bentUp }
+                else if forearmAngle > 55 { return .bentUpIn }
+                
+            } else {
+                if forearmAngle > 105.0 { return .bentDownOut }
+                else if forearmAngle > 80 { return .bentDown }
+                else if forearmAngle > 55 { return .bentDownIn }
+            }
+        }
             return .horizontalBentIn
         }
+    
+    
+    /// Gets the **hand's** position related to the **elbow**  in the verticalDown case, by comparing the angle between the forearm and the upper arm.
+    func ForearmToHandDownCase(forearmAngle: Float, crossVector: simd_float3, leftArm: Bool) -> ForearmToHandSubcase {
+        if leftArm {
+            if crossVector.z < 0 {
+                if forearmAngle > 125.0 { return .bentDownOut }
+                else if forearmAngle > 95 { return .bentDown }
+                else if forearmAngle > 70 { return .bentDownIn }
+                
+            } else {
+                if forearmAngle > 125.0 { return .bentUpOut }
+                else if forearmAngle > 95 { return .bentUp }
+                else if forearmAngle > 70 { return .bentUpIn }
+            }
+        } else {
+            if crossVector.z < 0 {
+                if forearmAngle > 125.0 { return .bentUpOut }
+                else if forearmAngle > 95 { return .bentUp }
+                else if forearmAngle > 70 { return .bentUpIn }
+
+            } else {
+                if forearmAngle > 125.0 { return .bentDownOut }
+                else if forearmAngle > 95 { return .bentDown }
+                else if forearmAngle > 70 { return .bentDownIn }
+            }
+        }
+        return .horizontalBentIn
+    }
+    
     
     /// Compares the **X axe** to classify the elbow's position.  Should be called at **ShoulderToForearmPos**
     func ShoulderToForearmPosZ(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmCase: ShoulderToForearmCase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
