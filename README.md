@@ -45,10 +45,10 @@ To integrate poseKit into your Xcode project using CocoaPods, specify it in your
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '13.0'
 use_frameworks!
 
-pod 'poseKit', '~> 0.0.5'
+pod 'PoseKit', '~> 0.5.0'
 ```
 
 Then, run the following command:
@@ -74,7 +74,7 @@ $ brew install carthage
 To integrate poseKit into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "d1l4y/poseKit" ~> 0.0.5
+github "d1l4y/PoseKit" ~> 0.5.0
 ```
 
 </details>
@@ -92,10 +92,14 @@ import PackageDescription
 let package = Package(
     name: "HelloposeKit",
     dependencies: [
-        .package(url: "https://github.com/d1l4y/poseKit.git", .upToNextMajor(from: "0.0.5"))
+        .package(url: "https://github.com/d1l4y/PoseKit.git", .upToNextMajor(from: "0.5.0"))
     ],
     targets: [
-        .target(name: "HelloposeKit", dependencies: ["poseKit"])
+      .target(
+        name: "PoseKit",
+        dependencies: [],
+        path: "Sources"
+      )
     ]
 )
 ```
@@ -117,11 +121,11 @@ $ git init
 - Add poseKit as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/d1l4y/poseKit.git
+$ git submodule add https://github.com/d1l4y/PoseKit.git
 $ git submodule update --init --recursive
 ```
 
-- Open the new `poseKit` folder, and drag the `poseKit.xcodeproj` into the Project Navigator of your application's Xcode project.
+- Open the new `PoseKit` folder, and drag the `poseKit.xcodeproj` into the Project Navigator of your application's Xcode project.
 
     > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
 
@@ -144,7 +148,7 @@ $ git submodule update --init --recursive
 <details>
   <summary><strong>Embedded Binaries</strong></summary><p>
 
-- Download the latest release from https://github.com/d1l4y/poseKit/releases
+- Download the latest release from https://github.com/d1l4y/PoseKit/releases
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
