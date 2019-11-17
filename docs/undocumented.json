@@ -1,0 +1,292 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PoseKit.swift",
+      "line": 61,
+      "symbol": "PoseKit.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 13,
+      "symbol": "ShoulderToForearmCase.verticalUp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 14,
+      "symbol": "ShoulderToForearmCase.verticalDown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 15,
+      "symbol": "ShoulderToForearmCase.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 20,
+      "symbol": "ShoulderToForearmSubcase.verticalUpDiagonalFront",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 21,
+      "symbol": "ShoulderToForearmSubcase.verticalUpParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 22,
+      "symbol": "ShoulderToForearmSubcase.verticalUpTransverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 23,
+      "symbol": "ShoulderToForearmSubcase.verticalDownDiagonalFront",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 24,
+      "symbol": "ShoulderToForearmSubcase.verticalDownDiagonalBack",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 25,
+      "symbol": "ShoulderToForearmSubcase.verticalDownParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 26,
+      "symbol": "ShoulderToForearmSubcase.verticalDownTransverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 27,
+      "symbol": "ShoulderToForearmSubcase.horizontalParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 28,
+      "symbol": "ShoulderToForearmSubcase.horizontalDiagonalBack",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 29,
+      "symbol": "ShoulderToForearmSubcase.horizontalDiagonalFront",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 30,
+      "symbol": "ShoulderToForearmSubcase.horizontalTransverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 35,
+      "symbol": "ForearmToHandForearmCase.straightHorizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 36,
+      "symbol": "ForearmToHandForearmCase.bentUp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 37,
+      "symbol": "ForearmToHandForearmCase.bentDown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 42,
+      "symbol": "ForearmToHandSubcase.straightHorizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 43,
+      "symbol": "ForearmToHandSubcase.horizontalBentIn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 44,
+      "symbol": "ForearmToHandSubcase.bentUp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 45,
+      "symbol": "ForearmToHandSubcase.bentUpOut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 46,
+      "symbol": "ForearmToHandSubcase.bentUpIn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 47,
+      "symbol": "ForearmToHandSubcase.bentDown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 48,
+      "symbol": "ForearmToHandSubcase.bentDownOut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 49,
+      "symbol": "ForearmToHandSubcase.bentDownIn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 54,
+      "symbol": "LegToKneeCase.straight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 55,
+      "symbol": "LegToKneeCase.halfOpen",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 56,
+      "symbol": "LegToKneeCase.Open",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 61,
+      "symbol": "LegToKneeSubcase.straightParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 62,
+      "symbol": "LegToKneeSubcase.straightBack",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 63,
+      "symbol": "LegToKneeSubcase.halfOpenDiagonal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 64,
+      "symbol": "LegToKneeSubcase.halfOpenParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 65,
+      "symbol": "LegToKneeSubcase.halfOpenTransversal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 66,
+      "symbol": "LegToKneeSubcase.openParallel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 67,
+      "symbol": "LegToKneeSubcase.openDiagonal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 68,
+      "symbol": "LegToKneeSubcase.openTransversal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 73,
+      "symbol": "KneeToFootCase.outstretched",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 74,
+      "symbol": "KneeToFootCase.bentOut",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 75,
+      "symbol": "KneeToFootCase.bent",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/dilay/Desktop/AAA/PoseKit/Sources/Core/PositionCases.swift",
+      "line": 76,
+      "symbol": "KneeToFootCase.bentIn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/dilay/Desktop/AAA/PoseKit"
+}
