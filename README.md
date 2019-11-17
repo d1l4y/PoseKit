@@ -11,9 +11,10 @@ PoseKit is a Library that uses ARKit and RealityKit to track a body position and
 ## Summary ##
 
 - [Requirements](#requirements)
+- [References](#references)
+- [How to Use](#howtouse)
 - [Installation](#installation)
 - [Contributing](#contributing)
-- [References](#references)
 - [Author](#author)
 - [License](#license)
 
@@ -28,6 +29,9 @@ PoseKit is a Library that uses ARKit and RealityKit to track a body position and
 - [Apple’s ARKit](https://developer.apple.com/documentation/arkit)
 - Demo Game using PoseKit (Link do jogo)
 
+
+## How to Use ##
+  - Simple call `posekit.BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor)` inside of the session method of your ARKit aplication(that uses Body tracking, [like this wwdc example](https://developer.apple.com/videos/play/wwdc2019/607)), this function will return a json with the body position
 
 ## Installation
 
