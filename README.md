@@ -3,7 +3,7 @@
 ![Banner Git](https://user-images.githubusercontent.com/17486329/68477479-5bb9fc80-020c-11ea-8ebc-1b3ef5a0006b.png)
 
 
-**Note:** This project is not complete, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
+**Note:** This project is not complete and under development, since it is a project made by students of the Apple Developer Academy in Curitiba, Brazil. 
 
 ## Overview ##
 PoseKit is a Library that uses ARKit and RealityKit to track a body position and return the position in a json. It has more than 4 million of different position possibilities
@@ -18,7 +18,7 @@ PoseKit is a Library that uses ARKit and RealityKit to track a body position and
 - [License](#license)
 
 ## Requirements ##
-- macOs Catalina/iOS 13+
+- iOS 13+
 - Xcode 11+
 - Swift 5+ 
 
@@ -28,10 +28,6 @@ PoseKit is a Library that uses ARKit and RealityKit to track a body position and
 - [Apple’s ARKit](https://developer.apple.com/documentation/arkit)
 - Demo Game using PoseKit (Link do jogo)
 
-## Requirements
-
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 10.0+
 
 ## Installation
 
