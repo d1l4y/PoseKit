@@ -167,7 +167,7 @@ To learn more see [Contributor Covenant](https://www.contributor-covenant.org/).
 ## Author
 
 [Vinicius Dilay](https://github.com/d1l4y), [Isabela Castro](https://github.com/isacastro), [Leonardo Palinkas](https://github.com/LeonardoPalinkas), [Lucas Ronnau](https://github.com/lucasronnau), [Saulo da Silva](https://github.com/sau-tech) 
-- [Discord](https://discord.gg/ssmGeb)
+- [Discord](https://discord.gg/Ny3dQuh)
 
 ## License
 
