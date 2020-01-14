@@ -7,7 +7,6 @@
 //
 
 import ARKit
-import RealityKit
 
 /// PoseKit's main class.
 public class PoseKit {
@@ -69,17 +68,17 @@ public class PoseKit {
         4. Instantiates the JSON.
         5. Returns a JSON string.
     */
-    public func BodyTrackingPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> String {
+    public func BodyTrackingPosition(bodyAnchor: ARBodyAnchor) -> String {
         
-        let leftArmPos = LeftArmPosition(character: character, bodyAnchor: bodyAnchor)
-        let rightArmPos = RightArmPosition(character: character, bodyAnchor: bodyAnchor)
-        let leftLegPos = LeftLegPosition(character: character, bodyAnchor: bodyAnchor)
-        let rightLegPos = RightLegPosition(character: character, bodyAnchor: bodyAnchor)
+        let leftArmPos = LeftArmPosition( bodyAnchor: bodyAnchor)
+        let rightArmPos = RightArmPosition( bodyAnchor: bodyAnchor)
+        let leftLegPos = LeftLegPosition( bodyAnchor: bodyAnchor)
+        let rightLegPos = RightLegPosition( bodyAnchor: bodyAnchor)
             
-        let position_rightArm = rightArmPos.rArmPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_leftArm = leftArmPos.lArmPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_leftLeg = leftLegPos.lLegPosition(character: character, bodyAnchor: bodyAnchor)
-        let position_rightLeg = rightLegPos.rLegPosition(character: character, bodyAnchor: bodyAnchor)
+        let position_rightArm = rightArmPos.rArmPosition( bodyAnchor: bodyAnchor)
+        let position_leftArm = leftArmPos.lArmPosition( bodyAnchor: bodyAnchor)
+        let position_leftLeg = leftLegPos.lLegPosition( bodyAnchor: bodyAnchor)
+        let position_rightLeg = rightLegPos.rLegPosition( bodyAnchor: bodyAnchor)
      
         let pos_leftArm = bodyPosition(name: "leftArm", position: "\(position_leftArm.ArmCase)")
         let pos_leftForearm = bodyPosition(name: "leftForearm", position: "\(position_leftArm.HandCase)")
@@ -88,7 +87,7 @@ public class PoseKit {
         let pos_leftLeg = bodyPosition(name: "leftLeg", position: "\(position_leftLeg.legCase)")
         let pos_leftForeleg = bodyPosition(name: "leftForeleg", position: "\(position_leftLeg.kneeCase)")
         let pos_rightLeg = bodyPosition(name: "rightLeg", position: "\(position_rightLeg.legCase)")
-        let pos_rightForeleg = bodyPosition(name: "rightForeleg", position: "\(position_rightLeg.legCase)")
+        let pos_rightForeleg = bodyPosition(name: "rightForeleg", position: "\(position_rightLeg.kneeCase)")
         
         let bodyPositions = json_BodyPositions(position_leftArm: pos_leftArm, position_leftForearm: pos_leftForearm, position_rightArm: pos_rightArm, position_rightForearm: pos_rightForearm, position_leftLeg: pos_leftLeg, position_leftForeleg: pos_leftForeleg, position_rightLeg: pos_rightLeg, position_rightForeleg: pos_rightForeleg)
         
@@ -117,7 +116,7 @@ public class PoseKit {
 
 
 
-extension BodyTrackedEntity {
+extension ARBodyAnchor {
     
     /// Returns a joint name from ARSkeleton - created by @valengo
     func jointName(forPath path: String) -> ARSkeleton.JointName {

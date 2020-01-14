@@ -20,7 +20,7 @@ internal class ArmsPosition  {
     
     
     /// Gets the **elbow's** position related to the **shoulder** by comparing the Y axe.
-    func ShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmCase {
+    func ShoulderToForearmPos(bodyAnchor: ARBodyAnchor, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmCase {
             let forearmShoulderVector : simd_float3 = [ForearmTransform.x - ShoulderTransform.x, ForearmTransform.y - ShoulderTransform.y, ForearmTransform.z - ShoulderTransform.z] //ajeitar
            
             //compara pelo eixo y (altura)
@@ -36,7 +36,7 @@ internal class ArmsPosition  {
         }
     
     /// Gets the **hand's** position related to the **elbow** by comparing the angle between the forearm and the upper arm.
-    func ForearmToHandPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmSubcase: ShoulderToForearmSubcase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4, leftArm: Bool) -> ForearmToHandSubcase {
+    func ForearmToHandPos(bodyAnchor: ARBodyAnchor, forearmSubcase: ShoulderToForearmSubcase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4, leftArm: Bool) -> ForearmToHandSubcase {
 
         let handForearmVector = bodyPart.vector(joint1: ForearmTransform, joint2: HandTransform)
         let shoulderForearmVector  = bodyPart.vector(joint1: ForearmTransform, joint2: ShoulderTransform)
@@ -106,7 +106,7 @@ internal class ArmsPosition  {
     
     
     /// Compares the **X axe** to classify the elbow's position.  Should be called at **ShoulderToForearmPos**
-    func ShoulderToForearmPosZ(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, forearmCase: ShoulderToForearmCase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
+    func ShoulderToForearmPosZ(bodyAnchor: ARBodyAnchor, forearmCase: ShoulderToForearmCase, HandTransform: simd_float4, ForearmTransform: simd_float4, ShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
         let forearmShoulderVector  = bodyPart.vector(joint1: ShoulderTransform, joint2: ForearmTransform)
         
         switch forearmCase {
@@ -116,7 +116,7 @@ internal class ArmsPosition  {
             } else if forearmShoulderVector.z > 0.05 {
                 if forearmShoulderVector.z > 0.2 {return .verticalDownTransverse} else {return .verticalDownDiagonalBack} //pra tras pra frente ou totalmente pra frente
             } else {
-                return .verticalUpParallel //pra trás reto
+                return .verticalDownParallel //pra trás reto
             }
             
         case .verticalUp:

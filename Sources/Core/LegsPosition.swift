@@ -7,8 +7,6 @@
 //
 
 import ARKit
-import RealityKit
-
 
 /// This class gets the positions of the legs by creating vectors from a joint to another and comparing the axes and angles.
 internal class LegsPosition  {

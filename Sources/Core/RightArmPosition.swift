@@ -7,7 +7,6 @@
 //
 
 import ARKit
-import RealityKit
 
 /// This class is responsible for the **right arm**.
 internal class RightArmPosition: ArmsPosition {
@@ -20,10 +19,10 @@ internal class RightArmPosition: ArmsPosition {
     var rHandTransform : simd_float4!
     
 /// Initiates the class and looks for the right knee and leg joint by getting the joint's index and global coordinates to the root.
-    init(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) {
+    init( bodyAnchor: ARBodyAnchor) {
 
-        guard let rForearmName = character?.jointName(forPath: "right_forearm_joint" ) else { print("right_forearm_joint not found!"); return}
-        
+        let rForearmName = ARSkeleton.JointName(rawValue: "right_forearm_joint")
+
         let rForearmIndex = ARSkeletonDefinition.defaultBody3D.index(for: rForearmName)
         let rHandIndex = ARSkeletonDefinition.defaultBody3D.index(for: .rightHand)
         let rShoulderIndex = ARSkeletonDefinition.defaultBody3D.index(for: .rightShoulder)
@@ -35,19 +34,19 @@ internal class RightArmPosition: ArmsPosition {
     }
 
 /// Calculates the arm's position and returns the **HandCase** and **ForearmSubcase**
-    func rArmPosition(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor) -> armCases {
+    func rArmPosition( bodyAnchor: ARBodyAnchor) -> armCases {
         
-        let rArmSubcase = RightShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
-        let rForearmCase = ForearmToHandPos(character: character, bodyAnchor: bodyAnchor, forearmSubcase: rArmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform, leftArm: false)
+        let rArmSubcase = RightShoulderToForearmPos( bodyAnchor: bodyAnchor, rHandTransform: rHandTransform, rForearmTransform: rForearmTransform, rShoulderTransform: rShoulderTransform)
+        let rForearmCase = ForearmToHandPos(bodyAnchor: bodyAnchor, forearmSubcase: rArmSubcase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform, leftArm: false)
         
         return armCases(ArmCase: rArmSubcase, HandCase: rForearmCase)
     }
     
     
 /// Get's the **elbow's** position related to the **shoulder**.
-    func RightShoulderToForearmPos(character: BodyTrackedEntity?, bodyAnchor: ARBodyAnchor, rHandTransform: simd_float4, rForearmTransform: simd_float4, rShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
-        let rightForearmCase = ShoulderToForearmPos(character: character, bodyAnchor: bodyAnchor, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
+    func RightShoulderToForearmPos( bodyAnchor: ARBodyAnchor, rHandTransform: simd_float4, rForearmTransform: simd_float4, rShoulderTransform: simd_float4) -> ShoulderToForearmSubcase {
+        let rightForearmCase = ShoulderToForearmPos( bodyAnchor: bodyAnchor, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
         
-        return ShoulderToForearmPosZ(character: character, bodyAnchor: bodyAnchor, forearmCase: rightForearmCase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
+        return ShoulderToForearmPosZ( bodyAnchor: bodyAnchor, forearmCase: rightForearmCase, HandTransform: rHandTransform, ForearmTransform: rForearmTransform, ShoulderTransform: rShoulderTransform)
     }
 }
